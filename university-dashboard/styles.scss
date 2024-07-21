@@ -1,5 +1,8 @@
 $primary-color: #3498db;
 $secondary-color: #2ecc71;
+$urgent-color: #e74c3c;
+$info-color: #3498db;
+$warning-color: #f39c12;
 $font-stack: Helvetica, sans-serif;
 
 body {
@@ -50,6 +53,25 @@ table {
 
   tr:nth-child(even) {
     background: #f2f2f2;
+  }
+}
+
+.alert {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  color: white;
+
+  &.alert-info {
+    background-color: $info-color;
+  }
+
+  &.alert-warning {
+    background-color: $warning-color;
+  }
+
+  &.alert-urgent {
+    background-color: $urgent-color;
   }
 }
 

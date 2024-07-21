@@ -38,6 +38,22 @@
       "description": "Heater not working",
       "status": "completed"
     }
+  ],
+  "alerts": [
+    {
+      "id": 1,
+      "message": "Upcoming room inspection for Room 101",
+      "type": "info"
+    },
+    {
+      "id": 2,
+      "message": "Maintenance deadline for Room 103 is tomorrow",
+      "type": "warning"
+    },
+    {
+      "id": 3,
+      "message": "Urgent: Resident in Room 102 needs assistance",
+      "type": "urgent"
+    }
   ]
 }
-

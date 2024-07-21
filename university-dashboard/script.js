@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
       displayRooms(data.rooms);
       displayMaintenanceRequests(data.maintenanceRequests);
       createOccupancyChart(data.rooms);
+      displayAlerts(data.alerts);
     })
     .catch(error => console.error('Error fetching data:', error));
 
@@ -75,6 +76,16 @@ document.addEventListener('DOMContentLoaded', function () {
       options: {
         responsive: true
       }
+    });
+  }
+
+  function displayAlerts(alerts) {
+    const alertsSection = document.getElementById('alerts-notifications');
+    alerts.forEach(alert => {
+      const alertDiv = document.createElement('div');
+      alertDiv.className = `alert alert-${alert.type}`;
+      alertDiv.textContent = alert.message;
+      alertsSection.appendChild(alertDiv);
     });
   }
 
