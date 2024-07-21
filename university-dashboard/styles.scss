@@ -1,14 +1,24 @@
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
-$urgent-color: #e74c3c;
-$info-color: #3498db;
-$warning-color: #f39c12;
-$font-stack: Helvetica, sans-serif;
+// Color Variables
+$primary-color: #3498db;  // Blue
+$secondary-color: #2ecc71;  // Green
+$urgent-color: #e74c3c;  // Red
+$warning-color: #f39c12;  // Orange
+$info-color: #3498db;  // Blue
+$dark-background: #2c3e50;
+$light-background: #ecf0f1;
+$text-color: #2c3e50;
+$light-text-color: #ecf0f1;
 
+// Font Stack
+$font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// Global Styles
 body {
   font-family: $font-stack;
-  background-color: white;
-  color: black;
+  background-color: $light-background;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -17,6 +27,9 @@ header {
   color: white;
   padding: 1rem;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 #theme-switcher {
@@ -25,14 +38,31 @@ header {
   padding: 0.5rem 1rem;
   color: white;
   cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
 }
 
 main {
   padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: $primary-color;
+  margin-bottom: 1rem;
 }
 
 h2 {
+  font-size: 1.5rem;
   color: $primary-color;
+  margin-bottom: 1rem;
 }
 
 table {
@@ -42,7 +72,7 @@ table {
 
   th, td {
     border: 1px solid $primary-color;
-    padding: 0.5rem;
+    padding: 0.75rem;
     text-align: left;
   }
 
@@ -75,21 +105,22 @@ table {
   }
 }
 
+// Dark Mode Styles
 .dark-mode {
-  background-color: #2c3e50;
-  color: #ecf0f1;
+  background-color: $dark-background;
+  color: $light-text-color;
 
   header {
-    background: #1abc9c;
+    background: $secondary-color;
   }
 
-  h2 {
-    color: #1abc9c;
+  h1, h2 {
+    color: $secondary-color;
   }
 
   table {
     th {
-      background: #1abc9c;
+      background: $secondary-color;
     }
 
     tr:nth-child(even) {
@@ -98,6 +129,10 @@ table {
   }
 
   #theme-switcher {
-    background: #e74c3c;
+    background: $urgent-color;
+
+    &:hover {
+      background-color: darken($urgent-color, 10%);
+    }
   }
 }

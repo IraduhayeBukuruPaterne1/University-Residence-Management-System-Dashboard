@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Residence Management System</title>
+    <title>University Residence Management Dashboard</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
-        <h1>University Residence Management Dashboard</h1>
+        <h1>University Residence Management System</h1>
         <button id="theme-switcher">Switch Theme</button>
     </header>
     <main>
+        <section id="alerts-notifications">
+            <h2>Alerts & Notifications</h2>
+        </section>
+
         <section id="data-visualization">
+            <h2>Occupancy Rates</h2>
             <canvas id="occupancyChart"></canvas>
         </section>
+
         <section id="room-management">
             <h2>Room Management</h2>
-            <!-- Room management table will be inserted here by JavaScript -->
         </section>
+
         <section id="maintenance-requests">
             <h2>Maintenance Requests</h2>
-            <!-- Maintenance requests table will be inserted here by JavaScript -->
-        </section>
-        <section id="alerts-notifications">
-            <h2>Alerts and Notifications</h2>
-            <!-- Alerts and notifications list here -->
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
